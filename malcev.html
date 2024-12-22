@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <!-- Вставьте ваши конфигурационные данные Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <script>
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой России</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #e0c3fc, #8efcb3);
+            background-size: 200% 200%;
+            animation: gradient-animation 6s ease infinite;
+            color: #333;
+            text-align: center;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .dates {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ph_1.jpg" alt="Фото героя" class="hero-image">
+        <h1>Мальцев Александр Викторович</h1>
+        <div class="dates">26.04.1975 - 13.03.2023</div>
+        <p>Мальцев Александр Викторович, 47-летний командир взвода, в одиночку захватил опорный пункт противника, уничтожил трех солдат и остальных бойцов ВСУ взял в плен. За свой подвиг Мальцев представлен к званию Героя России.</p>
+    </div>
+</body>
+</html>
