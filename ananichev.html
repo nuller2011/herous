@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой России</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #e0c3fc, #8efcb3);
+            background-size: 200% 200%;
+            animation: gradient-animation 6s ease infinite;
+            color: #333;
+            text-align: center;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .dates {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ananichev.JPG" alt="Фото героя" class="hero-image">
+        <h1>Александр Михайлович Ананичев</h1>
+        <div class="dates">25 мая 1991 года-11 июля 2022 года</div>
+        <p>
+            Командир батальона гвардии капитана. М. Ананичев с 24 февраля 2022 года участвовал во вторжение России на Украину. По данным военного ведомства РФ, с апреля исполнял обязанности командира полка, вместо погибшего гвардии подполковника Д. В. Межуева. В июне 2022 года было присвоено звание майор. По информации Министерства обороны РФ, 11 июля подразделение под его руководством проводило разведку боем у города Изюм Харьковской области, в ходе боя майор А. М. Ананичев погиб. Похоронен на кладбище села Новая Безгинка.
+15 августа 2022 года Указом Президента Российской Федерации («закрытым») гвардии майору Александру Михайловичу Ананичеву за проявленные мужество и героизм присвоено звание Герой России(посмертно)
+
+
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Герои Отечества</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(120deg, #001f3f, #ffcc00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 4s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .light {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  <div class="light" id="light"></div>
+
+  <script>
+    const starsContainer = document.getElementById("stars");
+    const light = document.getElementById("light");
+
+    // Создание звезд
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.animationDelay = `${Math.random() * 4}s`;
+      starsContainer.appendChild(star);
+    }
+
+    // Анимация света
+    document.addEventListener("mousemove", (e) => {
+      light.style.left = `${e.clientX}px`;
+      light.style.top = `${e.clientY}px`;
+      light.style.transform = `translate(-50%, -50%) scale(1.2)`;
+      setTimeout(() => {
+        light.style.transform = `translate(-50%, -50%) scale(1)`;
+      }, 100);
+    });
+  </script>
+</body>
+</html>

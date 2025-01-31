@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой России</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #e0c3fc, #8efcb3);
+            background-size: 200% 200%;
+            animation: gradient-animation 6s ease infinite;
+            color: #333;
+            text-align: center;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .dates {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ph_7.JPG" alt="Фото героя" class="hero-image">
+        <h1>Абаев Юрий Маирбекович</h1>
+        <div class="dates">11.12.1990 (34 года)</div>
+        <p>Подвиг Юрия Маирбековича Абаева совершил во время украинского контрнаступления на Запорожском направлении в районе села Работино. 70-му батальону мотострелков удалось вытеснить превосходящие силы противника и занять оборону. 
+            Позже комбат получил приказ на передислокацию в другую лесополосу. В это же время произошло новое боестолкновение с механизированной бригадой ВСУ, превосходящие силы которой пробили брешь в обороне и начали окружение российских войск. 
+            Во время вывода подразделений из котла батальон Абаева прикрывал их на необорудованном участке переднего края, планомерно выбивая противника. Заняв оборону, мотострелки несколько дней вели ожесточённые бои против украинских националистов. В результате сражений вражеские войска отступили, а стратегически важный рубеж остался под контролем российских военных. </p>
+    </div>
+</body>
+</html>
